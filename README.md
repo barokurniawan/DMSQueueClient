@@ -1,4 +1,5 @@
 # DMSQueueClient
+DMSQueueClient is a client implementation of DMSQueueService.
 
 ### Send Telegram Message 
 ```
