@@ -4,25 +4,28 @@ namespace DMSQueueClient\Config;
 
 class Config
 {
-    private $host;
+    private $serverHost;
+    private $serviceEnable;
 
-    /**
-     * Get the value of host
-     */
-    public function getHost()
+    public function __construct($serverHost = null, $enableService = true)
     {
-        return $this->host;
+        $this->serviceEnable = $enableService;
+        $this->setServerHost($serverHost);
     }
 
-    /**
-     * Set the value of host
-     *
-     * @return  self
-     */
-    public function setHost($host)
+    public function isServiceEnable()
     {
-        $this->host = $host;
+        return $this->serviceEnable;
+    }
 
+    public function getServerHost()
+    {
+        return $this->serverHost;
+    }
+
+    public function setServerHost($serverHost)
+    {
+        $this->serverHost = $serverHost;
         return $this;
     }
 }

@@ -4,9 +4,10 @@ namespace DMSQueueClient\Handler;
 
 use GuzzleHttp\Client;
 use DMSQueueClient\Config\Config;
+use DMSQueueClient\Entity\EmailArgs;
 use DMSQueueClient\Constant\Constant;
 
-class Telegram
+class Email
 {
     /**
      * @var Config
@@ -30,15 +31,17 @@ class Telegram
         return self::$instance;
     }
 
-    public function sendMessage($messageText)
+    public function sendEmail(EmailArgs $args)
     {
         $response = null;
         try {
             $response = $this->client->post(
-                $this->config->getServerHost() . Constant::TELEGRAM_SERVICE_NODE,
+                $this->config->getServerHost() . Constant::EMAIL_SERVICE_NODE,
                 [
                     "form_params" => [
-                        "messageText" => $messageText
+                        "to"           => $args->getMailTarget(),
+                        "mailTemplate" => $args->getMailTemplate(),
+                        "payload"      => $args->getPayload()->toArray(),
                     ]
                 ]
             );
