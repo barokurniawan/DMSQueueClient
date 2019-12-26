@@ -16,7 +16,7 @@ $payload->setSubject("Test message");
 $payload->setBodyMessage("test message ajah");
 
 $args = new EmailArgs;
-$args->addMailTarget("kurniawan9411n@gmail.com");
+$args->addMailTarget("your-target-mail@mailmailan.com");
 $args->setMailTemplate("mailer.test-mail");
 $args->setPayload($payload);
 
