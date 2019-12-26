@@ -1,0 +1,20 @@
+{
+    "name": "barokurniawan/dms-queue-client",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "barokurniawan",
+            "email": "kurniawan9411n@gmail.com"
+        }
+    ],
+    "require": {
+        "nesbot/carbon": "^1.39",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "DMSQueueClient\\": "src/DMSQueueClient/"
+        }
+    }
+}
