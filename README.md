@@ -11,7 +11,7 @@ $client->sendTelegramMessage("sending from DMSQueueClient");
 ```
 $client = DMSQueueClient::getInstance(new Config("http://dms-queue-server-address"));
 $payload = new MailPayload;
-$payload->setServiceName("Forway Mail Service");
+$payload->setServiceName("Your Mail Service");
 $payload->setSubject("Test message");
 $payload->setBodyMessage("test message ajah");
 
