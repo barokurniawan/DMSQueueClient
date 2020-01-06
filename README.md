@@ -1,16 +1,16 @@
 # DMSQueueClient
 DMSQueueClient is a client implementation of DMSQueueService.
 
-### Install
+## Install
 `composer require barokurniawan/dmsqueueclient`
 
-### Send Telegram Message 
+## Send Telegram Message 
 ```
 $client = DMSQueueClient::getInstance(new Config("http://dms-queue-server-address"));
 $client->sendTelegramMessage("sending from DMSQueueClient");
 ```
 
-### Send Email 
+## Send Email 
 ```
 $client = DMSQueueClient::getInstance(new Config("http://dms-queue-server-address"));
 $payload = new MailPayload;
